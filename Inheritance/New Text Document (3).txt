@@ -1,0 +1,6 @@
+interface A{
+
+ private String hod_name-"SKG";
+
+
+}

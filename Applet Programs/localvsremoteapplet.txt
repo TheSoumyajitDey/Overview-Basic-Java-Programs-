@@ -1,0 +1,43 @@
+A local applet is one that is stored on your own computer system (Figure 3.1). When your Web page must find a local applet, it doesn't need to retrieve information from the Internet-in fact, your browser doesn't even need to be connected to the Internet at that time. As you can see in Listing 3.1, a local applet is specified by a path name and a file name.
+
+Figure 3.1 : Local applets are stored on and loaded from your computer system.
+
+Listing 3.1  LST3_1.TXT: Specifying a Local Applet. 
+ 
+<applet
+
+    codebase="tictactoe"
+
+    code="TicTacToe.class"
+
+    width=120
+
+    height=120>
+
+</applet>
+
+In Listing 3.1, the codebase attribute specifies a path name on your system for the local applet, whereas the code attribute specifies the name of the byte-code file that contains the applet's code. The path specified in the codebase attribute is relative to the folder containing the HTML document that references the applet. (See the "Optional Attributes for Applets" section of Chapter 2for more information.)
+
+Remote Applets
+
+A remote applet is one that is located on another computer system (Figure 3.2). This computer system may be located in the building next door or it may be on the other side of the world-it makes no difference to your Java-compatible browser. No matter where the remote applet is located, it's downloaded onto your computer via the Internet. Your browser must, of course, be connected to the Internet at the time it needs to display the remote applet.
+
+Figure 3.2 : Remote applets are stored on another system and are down-loaded onto your computer via the Internet.
+
+To reference a remote applet in your Web page, you must know the applet's URL (where it's located on the Web) and any attributes and parameters that you need to supply in order to display the applet correctly. If you didn't write the applet, you'll need to find the document that describes the applet's attributes and parameters. This document is usually written by the applet's author. Listing 3.2 shows how to compose an HTML <applet> tag that accesses a remote applet.
+
+Listing 3.2  LST3_2.TXT: Specifiying a Remote Applet. 
+ 
+<applet
+
+    codebase="http://www.myconnect.com/applets/"
+
+    code="TicTacToe.class"
+
+    width=120
+
+    height=120>
+
+</applet>
+
+The only difference between Listing 3.1 and Listing 3.2 is the value of the codebase attribute. In the first case, codebase specifies a local folder, and in the second case, it specifies the URL at which the applet is located.
